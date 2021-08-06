@@ -21,7 +21,7 @@ setup(name="attack_info",
       packages=find_packages(),
 
       package_data={
-          '': [],
+          '': ['*.mustache'],
       },
 
       platforms=[platform.platform()],
@@ -31,6 +31,11 @@ setup(name="attack_info",
       ],
 
       keywords="enumeration, markdown, summary, s4vitar",
+      entry_points={
+          'console_scripts': [
+              'attack_info=attack_info.__main__'  # or any specific function you would like
+          ]
+      },
 
       classifiers=["Development Status :: 1 - Beta",
                    "Environment :: Console",
